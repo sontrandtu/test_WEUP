@@ -1,17 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:test_weup/components/basic_information.dart';
 import 'package:test_weup/components/item_card.dart';
 
 class HeaderProfile extends StatelessWidget {
   const HeaderProfile({
     Key? key,
-    this.pathImage,
-    this.displayName,
-    this.phoneNumber,
   }) : super(key: key);
-
-  final String? pathImage;
-  final String? displayName;
-  final String? phoneNumber;
 
   @override
   Widget build(BuildContext context) {
@@ -22,21 +16,10 @@ class HeaderProfile extends StatelessWidget {
       ),
       child: Column(
         children: [
-          Column(
-            children: [
-              const SizedBox(height: 13),
-              CircleAvatar(
-                radius: 50,
-                backgroundImage: AssetImage(pathImage!),
-              ),
-              const SizedBox(height: 10),
-              Text(
-                displayName!,
-                style: const TextStyle(fontWeight: FontWeight.bold),
-              ),
-              const SizedBox(height: 10),
-              Text(phoneNumber!),
-            ],
+          BasicInformation(
+            pathImage: "assets/images/avatar.png",
+            displayName: "Trần Văn Sơn",
+            phoneNumber: "0367759794",
           ),
           ItemCard(
             icon: const Icon(
@@ -63,3 +46,5 @@ class HeaderProfile extends StatelessWidget {
     );
   }
 }
+
+

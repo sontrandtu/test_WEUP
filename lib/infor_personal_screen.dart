@@ -24,14 +24,7 @@ class InfoPersonalScreen extends StatelessWidget {
         body: SingleChildScrollView(
           child: Column(
             children: [
-              Container(
-                alignment: Alignment.center,
-                child: const HeaderProfile(
-                  displayName: "Trần Văn Sơn",
-                  pathImage: "assets/images/avatar.png",
-                  phoneNumber: "0367759794",
-                ),
-              ),
+              HeaderProfile(),
               const SizedBox(height: 25),
               const ListOptions(),
               const SizedBox(height: 20),
